@@ -1,0 +1,16 @@
+from collections import deque
+food_court = deque()
+
+print(f"1. Beberapa pesanan masuk...")
+food_court.append("Burger")
+food_court.append("Kentang Goreng")
+food_court.append("Milkshake")
+food_court.append("Hotdog")
+food_court.append("Spagheti")
+print(f"2. List pesanan:, {list(food_court)}")
+
+print(f"3. 3 Pesanan pertama...")
+for i in range(3):
+    pesanan = food_court.popleft()
+    print(f"   Sedang membuat: {pesanan}")
+print(f"Sisa pesanan yang masih menunggu: {list(food_court)}")
